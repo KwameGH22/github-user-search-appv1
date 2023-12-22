@@ -1,6 +1,6 @@
 import React from 'react'
 
-const StatsStatus = () => {
+const StatsStatus = ({clearTodos}) => {
   return (
     <div style=
     {{
@@ -14,7 +14,7 @@ const StatsStatus = () => {
         bottom: '100px'
     }}>
         <p style={{marginLeft: '20px'}}>4</p>
-        <button style={{marginRight: '20px', borderStyle: 'none'}}>Completed</button>
+        <button onClick = {()=> clearTodos(todos.id)}style={{marginRight: '20px', borderStyle: 'none'}}>Completed</button>
     </div>
   )
 }

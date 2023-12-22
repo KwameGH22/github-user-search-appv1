@@ -10,12 +10,7 @@ import Items from './components/Items';
 
 
 function App() {
-  // const initialTodosState = {
-  //   id: Date.now(),
-  //   task: '',
-  //   complete: false,
-
-  // }
+ 
   const [todos, setTodos] = useState([]);
 
   const handleTodosAddition = (text) => {
@@ -35,12 +30,29 @@ function App() {
     setTodos(updatedArray);
   }
 
+  //Function to add toggleTodoStatus
+  const toggleTodoStatus = (id) = {
+    setTodos(
+      todos.map(
+        todo => {
+          return{...todo, complete: !todo.complete}
+        }
+      )
+      return todo;
+    )
+  }
+  //unction to clear completed tasks
+  const clearCompletedTodos = ()=> {
+    const todoItems = todos.fliter(todo => !todo.complete);
+    setTodos(todoItems);
+  }
+
   return (
     <>
       <NavBar/>
       <Form addNewTodo = {handleTodosAddition} />
       {todos.map((todo) => <Items key={todo.id} tasks = {todos} deleteTask={handleDelete}/>)}
-      <FilterScreen/>
+      <FilterScreen clearTodos = {clearCompletedTodos}/>
       <StatsStatus/>
     </>
   )

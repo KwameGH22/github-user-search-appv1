@@ -26,20 +26,7 @@ const FilterScreen = () => {
             <button style={{borderStyle:'none'}}>Completed</button>
         </div>
         <hr/>
-        {/* <div>
-            <div style={{display: 'flex', 
-                        justifyContent:'space-between', 
-                        alignItem: 'center', 
-                        alignItems:'baseline'
-                        }}>
-                <MdCancel style={{color:'red'}}/>
-                <p>item 1</p>
-                <MdDeleteForever style={{color:'red'}} />
-                
-            </div>
-            <hr style={{display: 'block'}}/>
-            
-        </div> */}
+        
     </div>
   )
 }
